@@ -2,16 +2,14 @@
 
 ## What is ML Engine?
 
-ML Engine is a Python package providing end to end Machine learning platform. It is designed to cover the end-to-end ML workflow: Onboard new application, train, evaluate, and deploy models, make predictions, and maintain the metadata.  It provides a set of Flask APIs to be used by other applications as a service. It basically acts as a Orchestrator for the ML process flow to ease the process of moving ML model in a notebook to Production deployment.
+ML Engine is a Python package providing end to end Machine learning platform. It is designed to cover the end-to-end ML workflow: Onboard new application, train, evaluate, and deploy models, make predictions, and maintain the metadata.  It provides a set of Flask APIs to be used by other applications as a service. It basically acts as a Orchestrator for the ML process flow to ease the process of moving ML model from a notebook to Production deployment.
 
 
 ## Main Features:
 
-  	ML as a Platform
-
-  	ML as a Service/API
-
-  	ML Orchestration
+  	ML as a Platform<br/>
+  	ML as a Service/API<br/>
+  	ML Orchestration<br/>
 
 
 ## Where to get it
@@ -19,63 +17,55 @@ The source code is currently hosted on GitHub at: https://github.com/sourabhpotn
 
     ### From PyPI
     pip install mlengine
-
-## ML Engine Data Science process flow:
-
-### B – S – E – M – M – A – C – D – P (based on SEMMA + CRISP-DM)
-
-    Business and Data understanding
     
-    Sampling / Creating Analytical Data Set
-    
-    Explore data
-    
-    Modify/Cleanse/Preprocess data
-    
-    ML Model creation
-    
-    Assess/Evaluate model results
-    
-    Compare models
-    
-    Deploy model
-    
-    Predict the unseen data
+## Starting the ML Engine
+```
+	### Get the location where the mlengine package is installed
+	pip show mlengine | grep Location 
+	### Go to the location where  mlengine package is installed
+   	cd </Location/mlengine>
+	### Start the ML Engine application
+   	bash start_app.sh
+   	### Check status of the ML Engine
+	bash status_app.sh 
+	### To stop the ML Engine
+	bash stop_app.sh 
+```
+This will start the Swagger application at:
+	http://server_name:5005/ or http://localhost:5005/
+  
 
 ## ML Engine Core components:
-API
-Metadata manager
-UI  
-Infra
-Database
-ML Model
+**API** - Flask based APIs<br/>
+**Metadata manager** - Directory structure maintained for Data Goveranance. Adviced to create own metadata store in a database
+**UI** - Swagger UI to access the APIs. Advised to create own UI to access the APIs <br/>   
+**Infra** - To be deployed on a UNIX box<br/>
+**Database** - To store the training and prediction files in a database to be accessed by UI<br/>
+**ML Model** - Machine Learning model created using Sickit-Learn<br/>
 
-URL:	https://<server>:5001/
-      https://localhost:5001/
-  
-  
+
 ## API Flow:
 
-### Onboarding -> Upload -> Explore -> Training -> Predict
+**Onboarding -> Upload -> Explore -> Training -> Predict**
 
-Model - 	GetModelsList
-		      TrainModel
-		      PredictModel
-		      GetModelDetails
+**Model** - 		GetModelsList
+			TrainModel
+			PredictModel
+			GetModelDetails
 
-Data - 		Upload
-		      Explore
-		      Download
+**Data** - 		Upload
+			Explore
+			Download
 
-Application - AddApplication  (Level1)
-              Add Key/Region/Product (Level2)
-		          GetApplicationsLIst
-              GetKeys/Regions/ProductsList
+**Application** - 	AddApplication  (Level1)
+              		Add Key/Region/Product (Level2)
+		        GetApplicationsLIst
+              		GetKeys/Regions/ProductsList
 
-Algorithm -	GetAlgorithmsList
+**Algorithm** -		GetAlgorithmsList
 
 
-Supported algorithms:
+## Supported algorithms:
 
   1. DecisionTreeClassifier    (Classification)
   2. RandomForestClassifier    (Classification)
