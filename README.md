@@ -4,6 +4,9 @@
 
 ML Engine is a Python package providing end to end Machine learning platform. It is designed to cover the end-to-end ML workflow: Onboard new application, train, evaluate, and deploy models, make predictions, and maintain the metadata.  It provides a set of Flask APIs to be used standalone or by other applications as a service. It basically acts as a Orchestrator for the ML process flow to ease the process of moving ML model from a notebook to Production deployment.
 
+More details at: https://github.com/sourabhpotnis/mlengine/wiki
+
+
 
 ## Main Features:
 
