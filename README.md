@@ -32,8 +32,8 @@ This will start the Swagger application at:
 
 ## ML Engine Core components:
 **API** - Flask based APIs<br/>
-**Metadata manager** - Directory structure maintained for Data Goveranance. Adviced to create own metadata store in a database
-**UI** - Swagger UI to access the APIs. Advised to create own UI to access the APIs <br/>   
+**Metadata manager** - Directory structure maintained for Data Goveranance. Adviced to create own metadata store in a database<br/>
+**UI** - Swagger UI to access the APIs. Advised to create own UI to access the APIs<br/>
 **Infra** - To be deployed on a UNIX box<br/>
 **Database** - To store the training and prediction files in a database to be accessed by UI<br/>
 **ML Model** - Machine Learning model created using Sickit-Learn<br/>
