@@ -23,16 +23,8 @@ The source code is currently hosted on GitHub at: https://github.com/sourabhpotn
     
 ## Starting the ML Engine
 ```
-	### Get the location where the mlengine package is installed
-	pip show mlengine | grep Location 
-	### Go to the location where  mlengine package is installed
-   	cd </Location/mlengine>
-	### Start the ML Engine application
-   	bash start_app.sh
-   	### Check status of the ML Engine
-	bash status_app.sh 
-	### To stop the ML Engine
-	bash stop_app.sh 
+>>> import mlengine
+>>> mlengine.run_mlengine()
 ```
 This will start the Swagger application at:
 	http://server_name:5005/ or http://localhost:5005/
